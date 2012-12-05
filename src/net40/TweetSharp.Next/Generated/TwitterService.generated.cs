@@ -571,6 +571,78 @@ namespace TweetSharp
 		TwitterSearchResult SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType);	
 
  
+        
+		TwitterSearchResult Search(string q, string geocode);	
+
+ 
+        
+		TwitterSearchResult Search(string q, TwitterSearchResultType resultType, string geocode);	
+
+ 
+        
+		TwitterSearchResult Search(string q, int rpp, string geocode);	
+
+ 
+        
+		TwitterSearchResult Search(string q, int rpp, TwitterSearchResultType resultType, string geocode);	
+
+ 
+        
+		TwitterSearchResult Search(string q, int page, int rpp, string geocode);	
+
+ 
+        
+		TwitterSearchResult Search(string q, int page, int rpp, TwitterSearchResultType resultType, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchSince(long since_id, string q, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchSince(long since_id, string q, TwitterSearchResultType resultType, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchSince(long since_id, string q, int rpp, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchSince(long since_id, string q, int rpp, TwitterSearchResultType resultType, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchSince(long since_id, string q, int page, int rpp, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchSince(long since_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchBefore(long max_id, string q, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchBefore(long max_id, string q, TwitterSearchResultType resultType, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchBefore(long max_id, string q, int rpp, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchBefore(long max_id, string q, int rpp, TwitterSearchResultType resultType, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchBefore(long max_id, string q, int page, int rpp, string geocode);	
+
+ 
+        
+		TwitterSearchResult SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode);	
+
+ 
         [Obsolete("Twitter has declared this method obsolete; it may cease to function at any time. Check https://dev.twitter.com/docs/api#deprecated for alternatives.")]
 		IEnumerable<TwitterStatus> ListTweetsOnPublicTimeline();	
 
@@ -753,6 +825,14 @@ namespace TweetSharp
  
         
 		IEnumerable<TwitterStatus> ListTweetsOnSpecifiedUserTimelineBefore(string screenName, long maxId, int page, int count);	
+
+ 
+        
+		IEnumerable<TwitterStatus> ListTweetsAndRetweetsOnSpecifiedUserTimeline(string screenName, bool includeRts);	
+
+ 
+        
+		IEnumerable<TwitterStatus> ListTweetsAndRetweetsOnSpecifiedUserTimelineSince(string screenName, long sinceId, bool includeRts);	
 
  
         
@@ -1503,6 +1583,60 @@ namespace TweetSharp
         
 		IAsyncResult SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, Action<TwitterSearchResult, TwitterResponse> action);		
 
+        
+		IAsyncResult Search(string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult Search(string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult Search(string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult Search(string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult Search(string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult Search(string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchSince(long since_id, string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchSince(long since_id, string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchSince(long since_id, string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchSince(long since_id, string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchSince(long since_id, string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchSince(long since_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchBefore(long max_id, string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchBefore(long max_id, string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchBefore(long max_id, string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchBefore(long max_id, string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchBefore(long max_id, string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
+        
+		IAsyncResult SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);		
+
         [Obsolete("Twitter has declared this method obsolete; it may cease to function at any time. Check https://dev.twitter.com/docs/api#deprecated for alternatives.")]
 		IAsyncResult ListTweetsOnPublicTimeline(Action<IEnumerable<TwitterStatus>, TwitterResponse> action);		
 
@@ -1640,6 +1774,12 @@ namespace TweetSharp
 
         
 		IAsyncResult ListTweetsOnSpecifiedUserTimelineBefore(string screenName, long maxId, int page, int count, Action<IEnumerable<TwitterStatus>, TwitterResponse> action);		
+
+        
+		IAsyncResult ListTweetsAndRetweetsOnSpecifiedUserTimeline(string screenName, bool includeRts, Action<IEnumerable<TwitterStatus>, TwitterResponse> action);		
+
+        
+		IAsyncResult ListTweetsAndRetweetsOnSpecifiedUserTimelineSince(string screenName, long sinceId, bool includeRts, Action<IEnumerable<TwitterStatus>, TwitterResponse> action);		
 
         
 		IAsyncResult ListTweetsMentioningMe(Action<IEnumerable<TwitterStatus>, TwitterResponse> action);		
@@ -2436,6 +2576,20 @@ namespace TweetSharp
 		IEnumerable<TwitterStatus> EndListTweetsOnSpecifiedUserTimelineBefore(IAsyncResult result, TimeSpan timeout);
 
         
+		IAsyncResult BeginListTweetsAndRetweetsOnSpecifiedUserTimeline();
+
+		IEnumerable<TwitterStatus> EndListTweetsAndRetweetsOnSpecifiedUserTimeline(IAsyncResult result);		
+
+		IEnumerable<TwitterStatus> EndListTweetsAndRetweetsOnSpecifiedUserTimeline(IAsyncResult result, TimeSpan timeout);
+
+        
+		IAsyncResult BeginListTweetsAndRetweetsOnSpecifiedUserTimelineSince();
+
+		IEnumerable<TwitterStatus> EndListTweetsAndRetweetsOnSpecifiedUserTimelineSince(IAsyncResult result);		
+
+		IEnumerable<TwitterStatus> EndListTweetsAndRetweetsOnSpecifiedUserTimelineSince(IAsyncResult result, TimeSpan timeout);
+
+        
 		IAsyncResult BeginListTweetsMentioningMe();
 
 		IEnumerable<TwitterStatus> EndListTweetsMentioningMe(IAsyncResult result);		
@@ -3112,6 +3266,60 @@ namespace TweetSharp
         
 		void SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, Action<TwitterSearchResult, TwitterResponse> action);
 
+        
+		void Search(string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void Search(string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void Search(string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void Search(string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void Search(string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void Search(string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchSince(long since_id, string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchSince(long since_id, string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchSince(long since_id, string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchSince(long since_id, string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchSince(long since_id, string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchSince(long since_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchBefore(long max_id, string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchBefore(long max_id, string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchBefore(long max_id, string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchBefore(long max_id, string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchBefore(long max_id, string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
+        
+		void SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action);
+
         [Obsolete("Twitter has declared this method obsolete; it may cease to function at any time. Check https://dev.twitter.com/docs/api#deprecated for alternatives.")]
 		void ListTweetsOnPublicTimeline(Action<IEnumerable<TwitterStatus>, TwitterResponse> action);
 
@@ -3249,6 +3457,12 @@ namespace TweetSharp
 
         
 		void ListTweetsOnSpecifiedUserTimelineBefore(string screenName, long maxId, int page, int count, Action<IEnumerable<TwitterStatus>, TwitterResponse> action);
+
+        
+		void ListTweetsAndRetweetsOnSpecifiedUserTimeline(string screenName, bool includeRts, Action<IEnumerable<TwitterStatus>, TwitterResponse> action);
+
+        
+		void ListTweetsAndRetweetsOnSpecifiedUserTimelineSince(string screenName, long sinceId, bool includeRts, Action<IEnumerable<TwitterStatus>, TwitterResponse> action);
 
         
 		void ListTweetsMentioningMe(Action<IEnumerable<TwitterStatus>, TwitterResponse> action);
@@ -4346,6 +4560,114 @@ namespace TweetSharp
 			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType);
 		}
 
+        
+		public virtual TwitterSearchResult Search(string q, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult Search(string q, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult Search(string q, int rpp, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult Search(string q, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult Search(string q, int page, int rpp, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult Search(string q, int page, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchSince(long since_id, string q, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?since_id=", since_id, "&q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchSince(long since_id, string q, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?since_id=", since_id, "&q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchSince(long since_id, string q, int rpp, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?since_id=", since_id, "&q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchSince(long since_id, string q, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?since_id=", since_id, "&q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchSince(long since_id, string q, int page, int rpp, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?since_id=", since_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchSince(long since_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?since_id=", since_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchBefore(long max_id, string q, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?max_id=", max_id, "&q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchBefore(long max_id, string q, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?max_id=", max_id, "&q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchBefore(long max_id, string q, int rpp, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?max_id=", max_id, "&q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchBefore(long max_id, string q, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?max_id=", max_id, "&q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchBefore(long max_id, string q, int page, int rpp, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual TwitterSearchResult SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return WithHammock<TwitterSearchResult>("search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
         [Obsolete("Twitter has declared this method obsolete; it may cease to function at any time. Check https://dev.twitter.com/docs/api#deprecated for alternatives.")]
 		public virtual IEnumerable<TwitterStatus> ListTweetsOnPublicTimeline()
 		{
@@ -4620,6 +4942,18 @@ namespace TweetSharp
 		public virtual IEnumerable<TwitterStatus> ListTweetsOnSpecifiedUserTimelineBefore(string screenName, long maxId, int page, int count)
 		{
 			return WithHammock<IEnumerable<TwitterStatus>>("statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&max_id=", maxId, "&page=", page, "&count=", count);
+		}
+
+        
+		public virtual IEnumerable<TwitterStatus> ListTweetsAndRetweetsOnSpecifiedUserTimeline(string screenName, bool includeRts)
+		{
+			return WithHammock<IEnumerable<TwitterStatus>>("statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&include_rts=", includeRts);
+		}
+
+        
+		public virtual IEnumerable<TwitterStatus> ListTweetsAndRetweetsOnSpecifiedUserTimelineSince(string screenName, long sinceId, bool includeRts)
+		{
+			return WithHammock<IEnumerable<TwitterStatus>>("statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&since_id=", sinceId, "&include_rts=", includeRts);
 		}
 
         
@@ -5953,6 +6287,114 @@ namespace TweetSharp
 			return WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType);
 		}
 
+        
+		public virtual IAsyncResult Search(string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult Search(string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult Search(string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult Search(string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult Search(string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult Search(string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchSince(long since_id, string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchSince(long since_id, string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchSince(long since_id, string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchSince(long since_id, string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchSince(long since_id, string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchSince(long since_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchBefore(long max_id, string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchBefore(long max_id, string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchBefore(long max_id, string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchBefore(long max_id, string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchBefore(long max_id, string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			return WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
         [Obsolete("Twitter has declared this method obsolete; it may cease to function at any time. Check https://dev.twitter.com/docs/api#deprecated for alternatives.")]
 		public virtual IAsyncResult ListTweetsOnPublicTimeline(Action<IEnumerable<TwitterStatus>, TwitterResponse> action)
 		{
@@ -6227,6 +6669,18 @@ namespace TweetSharp
 		public virtual IAsyncResult ListTweetsOnSpecifiedUserTimelineBefore(string screenName, long maxId, int page, int count, Action<IEnumerable<TwitterStatus>, TwitterResponse> action)
 		{
 			return WithHammock(action, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&max_id=", maxId, "&page=", page, "&count=", count);
+		}
+
+        
+		public virtual IAsyncResult ListTweetsAndRetweetsOnSpecifiedUserTimeline(string screenName, bool includeRts, Action<IEnumerable<TwitterStatus>, TwitterResponse> action)
+		{
+			return WithHammock(action, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&include_rts=", includeRts);
+		}
+
+        
+		public virtual IAsyncResult ListTweetsAndRetweetsOnSpecifiedUserTimelineSince(string screenName, long sinceId, bool includeRts, Action<IEnumerable<TwitterStatus>, TwitterResponse> action)
+		{
+			return WithHammock(action, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&since_id=", sinceId, "&include_rts=", includeRts);
 		}
 
         
@@ -7560,6 +8014,114 @@ namespace TweetSharp
 			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType);
 		}
 
+        
+		public virtual IAsyncResult BeginSearch(string q, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearch(string q, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearch(string q, int rpp, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearch(string q, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearch(string q, int page, int rpp, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearch(string q, int page, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchSince(long since_id, string q, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchSince(long since_id, string q, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchSince(long since_id, string q, int rpp, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchSince(long since_id, string q, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchSince(long since_id, string q, int page, int rpp, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchSince(long since_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchBefore(long max_id, string q, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchBefore(long max_id, string q, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchBefore(long max_id, string q, int rpp, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchBefore(long max_id, string q, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchBefore(long max_id, string q, int page, int rpp, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual IAsyncResult BeginSearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode)
+		{
+			return BeginWithHammock<TwitterSearchResult>(WebMethod.Get, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
         [Obsolete("Twitter has declared this method obsolete; it may cease to function at any time. Check https://dev.twitter.com/docs/api#deprecated for alternatives.")]
 		public virtual IAsyncResult BeginListTweetsOnPublicTimeline()
 		{
@@ -7834,6 +8396,18 @@ namespace TweetSharp
 		public virtual IAsyncResult BeginListTweetsOnSpecifiedUserTimelineBefore(string screenName, long maxId, int page, int count)
 		{
 			return BeginWithHammock<IEnumerable<TwitterStatus>>(WebMethod.Get, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&max_id=", maxId, "&page=", page, "&count=", count);
+		}
+
+        
+		public virtual IAsyncResult BeginListTweetsAndRetweetsOnSpecifiedUserTimeline(string screenName, bool includeRts)
+		{
+			return BeginWithHammock<IEnumerable<TwitterStatus>>(WebMethod.Get, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&include_rts=", includeRts);
+		}
+
+        
+		public virtual IAsyncResult BeginListTweetsAndRetweetsOnSpecifiedUserTimelineSince(string screenName, long sinceId, bool includeRts)
+		{
+			return BeginWithHammock<IEnumerable<TwitterStatus>>(WebMethod.Get, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&since_id=", sinceId, "&include_rts=", includeRts);
 		}
 
         
@@ -9259,6 +9833,30 @@ namespace TweetSharp
 		}
 
         
+		public virtual IEnumerable<TwitterStatus> EndListTweetsAndRetweetsOnSpecifiedUserTimeline(IAsyncResult result) 
+		{
+			return EndWithHammock<IEnumerable<TwitterStatus>>(result);
+		}
+
+		
+		public virtual IEnumerable<TwitterStatus> EndListTweetsAndRetweetsOnSpecifiedUserTimeline(IAsyncResult result, TimeSpan timeout) 
+		{
+			return EndWithHammock<IEnumerable<TwitterStatus>>(result, timeout);
+		}
+
+        
+		public virtual IEnumerable<TwitterStatus> EndListTweetsAndRetweetsOnSpecifiedUserTimelineSince(IAsyncResult result) 
+		{
+			return EndWithHammock<IEnumerable<TwitterStatus>>(result);
+		}
+
+		
+		public virtual IEnumerable<TwitterStatus> EndListTweetsAndRetweetsOnSpecifiedUserTimelineSince(IAsyncResult result, TimeSpan timeout) 
+		{
+			return EndWithHammock<IEnumerable<TwitterStatus>>(result, timeout);
+		}
+
+        
 		public virtual IEnumerable<TwitterStatus> EndListTweetsMentioningMe(IAsyncResult result) 
 		{
 			return EndWithHammock<IEnumerable<TwitterStatus>>(result);
@@ -10535,6 +11133,114 @@ namespace TweetSharp
 			WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType);
 		}
 
+        
+		public virtual void Search(string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual void Search(string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual void Search(string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual void Search(string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual void Search(string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual void Search(string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchSince(long since_id, string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchSince(long since_id, string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchSince(long since_id, string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchSince(long since_id, string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchSince(long since_id, string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchSince(long since_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?since_id=", since_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchBefore(long max_id, string q, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchBefore(long max_id, string q, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchBefore(long max_id, string q, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchBefore(long max_id, string q, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchBefore(long max_id, string q, int page, int rpp, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&geocode=", geocode);
+		}
+
+        
+		public virtual void SearchBefore(long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode, Action<TwitterSearchResult, TwitterResponse> action)
+		{
+			WithHammock(action, "search", FormatAsString, "?max_id=", max_id, "&q=", q, "&page=", page, "&rpp=", rpp, "&result_type=", resultType, "&geocode=", geocode);
+		}
+
         [Obsolete("Twitter has declared this method obsolete; it may cease to function at any time. Check https://dev.twitter.com/docs/api#deprecated for alternatives.")]
 		public virtual void ListTweetsOnPublicTimeline(Action<IEnumerable<TwitterStatus>, TwitterResponse> action)
 		{
@@ -10809,6 +11515,18 @@ namespace TweetSharp
 		public virtual void ListTweetsOnSpecifiedUserTimelineBefore(string screenName, long maxId, int page, int count, Action<IEnumerable<TwitterStatus>, TwitterResponse> action)
 		{
 			WithHammock(action, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&max_id=", maxId, "&page=", page, "&count=", count);
+		}
+
+        
+		public virtual void ListTweetsAndRetweetsOnSpecifiedUserTimeline(string screenName, bool includeRts, Action<IEnumerable<TwitterStatus>, TwitterResponse> action)
+		{
+			WithHammock(action, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&include_rts=", includeRts);
+		}
+
+        
+		public virtual void ListTweetsAndRetweetsOnSpecifiedUserTimelineSince(string screenName, long sinceId, bool includeRts, Action<IEnumerable<TwitterStatus>, TwitterResponse> action)
+		{
+			WithHammock(action, "statuses/user_timeline", FormatAsString, "?screen_name=", screenName, "&since_id=", sinceId, "&include_rts=", includeRts);
 		}
 
         

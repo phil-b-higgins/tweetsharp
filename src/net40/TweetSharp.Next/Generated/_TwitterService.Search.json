@@ -18,3 +18,24 @@ TwitterSearchResult, "search", SearchBefore, long max_id, string q, int rpp
 TwitterSearchResult, "search", SearchBefore, long max_id, string q, int rpp, TwitterSearchResultType resultType
 TwitterSearchResult, "search", SearchBefore, long max_id, string q, int page, int rpp
 TwitterSearchResult, "search", SearchBefore, long max_id, string q, int page, int rpp, TwitterSearchResultType resultType
+
+TwitterSearchResult, "search", Search, string q, string geocode
+TwitterSearchResult, "search", Search, string q, TwitterSearchResultType resultType, string geocode
+TwitterSearchResult, "search", Search, string q, int rpp, string geocode
+TwitterSearchResult, "search", Search, string q, int rpp, TwitterSearchResultType resultType, string geocode
+TwitterSearchResult, "search", Search, string q, int page, int rpp, string geocode
+TwitterSearchResult, "search", Search, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode
+
+TwitterSearchResult, "search", SearchSince, long since_id, string q, string geocode
+TwitterSearchResult, "search", SearchSince, long since_id, string q, TwitterSearchResultType resultType, string geocode
+TwitterSearchResult, "search", SearchSince, long since_id, string q, int rpp, string geocode
+TwitterSearchResult, "search", SearchSince, long since_id, string q, int rpp, TwitterSearchResultType resultType, string geocode
+TwitterSearchResult, "search", SearchSince, long since_id, string q, int page, int rpp, string geocode
+TwitterSearchResult, "search", SearchSince, long since_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode
+
+TwitterSearchResult, "search", SearchBefore, long max_id, string q, string geocode
+TwitterSearchResult, "search", SearchBefore, long max_id, string q, TwitterSearchResultType resultType, string geocode
+TwitterSearchResult, "search", SearchBefore, long max_id, string q, int rpp, string geocode
+TwitterSearchResult, "search", SearchBefore, long max_id, string q, int rpp, TwitterSearchResultType resultType, string geocode
+TwitterSearchResult, "search", SearchBefore, long max_id, string q, int page, int rpp, string geocode
+TwitterSearchResult, "search", SearchBefore, long max_id, string q, int page, int rpp, TwitterSearchResultType resultType, string geocode
